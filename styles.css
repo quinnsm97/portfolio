@@ -52,10 +52,7 @@ nav ul{
     display: flex;
     justify-content: center;
     text-align: center;
-}
-
-main {
-    padding: 40px 20px; 
+    list-style: none;
 }
 
 section {
