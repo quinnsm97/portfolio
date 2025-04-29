@@ -5,16 +5,16 @@
 }
 
 body {
-    background-color: #2d6a4f;
+    background-color: #8c8b94;
     font-family: 'Courier New', Courier, monospace;
     color: #ffcc99;
-    line-height: 1.6; /* More space between lines */
+    line-height: 1.6; 
 }
 
 header {
     background-color: #2d6a4f;
     text-align: center;
-    padding: 40px 20px; /* More top and side padding */
+    padding: 40px 20px; 
 }
 
 header h1 {
@@ -32,13 +32,14 @@ nav {
     padding: 15px 0;
 }
 
+
 nav a {
     color: #ffcc99;
     text-decoration: none;
     padding: 10px 20px;
     margin: 0 15px;
     font-size: 1.1em;
-    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
@@ -47,14 +48,20 @@ nav a:hover {
     border-radius: 5px;
 }
 
+nav ul{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 main {
-    padding: 40px 20px; /* More space inside main */
+    padding: 40px 20px; 
 }
 
 section {
-    background-color: #3b7a5a; /* Slightly lighter green for contrast */
+    background-color: #3b7a5a; 
     padding: 30px 20px;
-    margin-bottom: 40px; /* Space between sections */
+    margin-bottom: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -75,22 +82,8 @@ section p {
     text-align: center;
 }
 
-body {
-    background-color: #2d6a4f;
-    font-family: 'Courier New', Courier, monospace;
-    color: #ffcc99;
-    line-height: 1.6;
-}
-
 main {
-    background-color: #ffcc99; /* 🌟 Peach background for the main area! */
+    background-color: #ffcc99;
     padding: 40px 20px;
 }
 
-section {
-    background-color: #2d6a4f; /* 🌟 Dark green background inside each section */
-    padding: 30px 20px;
-    margin-bottom: 40px; /* Gap between sections */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
