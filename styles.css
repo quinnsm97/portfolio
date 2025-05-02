@@ -46,7 +46,7 @@ nav a {
 
 nav a:hover {
     background-color: #0b52eb;
-    color: #2d6a4f;
+    color: #9e97ac;
     border-radius: 5px;
 }
 
@@ -97,5 +97,52 @@ main {
 
 html{
     scroll-behavior: smooth;
+}
+
+.corner-nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #0b52eb;
+    border-radius: 8px;
+    padding: 8px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.corner-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.corner-nav a {
+    font-size: 0.8em;
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: left;
+    color: #9e97ac;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    
+
+}
+
+.corner-nav a:hover{
+    background-color: #9e97ac;
+    color: #0b52eb;
 }
 
