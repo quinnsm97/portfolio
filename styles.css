@@ -21,7 +21,7 @@ header h1 {
     font-size: 3em;
     margin-bottom: 10px;
     border-bottom: 4px solid #0b52eb;
-    z-index: 1001;
+    z-index: 1001;  
 }
 
 header h2 {
@@ -102,57 +102,74 @@ html{
 
 .hamburger-menu{
     position: fixed;
+    display: inline-block;
     top: 10px;
     left: 10px;
     z-index: 1000;
 }
-.menu-checkbox{
-    display: none;
-}
 
-.menu-icon{
+.hamburger-icon{
+    top: 10px;
+    left: 10px;
     font-size: 24px;
-    background-color: #0b52eb;
-    color: #9e97ac;
-    padding: 8px 12px;
-    border-radius: 6px;
     cursor: pointer;
-    display: inline-block;
-
-}
-
-.menu-links{
-    display: flex;
-    flex-direction: column;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-    margin-top: 8px;
-    background-color: #0b52eb;
-    border-radius: 6px;
-    padding: 0 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-}
-
-.menu-checkbox:checked + .menu-icon + .menu-links {
-    max-height: 500px;
-    opacity: 1;
     padding: 10px;
-}
-
-.menu-links a {
+    background-color: #0b52eb;
     color: #9e97ac;
-    text-decoration: none;
-    padding: 6px;
-    font-weight: bold;
+    border-radius: 5px;
+    width: 50px;
+    border: solid white;
+    margin-bottom: 0;
+}
+
+
+.menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0b52eb;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 1s ease, visibility 1s ease, transform 1s ease 0.05s;
+    pointer-events: none;
+
 
 }
 
-.menu-links a:hover {
+.menu li{
+    margin: 5px 0;
+    border-radius: 5px;
     background-color: #9e97ac;
+    overflow: hidden;
+    
+}
+
+.menu a {
+    display: block;
+    border-radius: 5px ;
     color: #0b52eb;
-    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold; 
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover{
+    background-color: white;
+}
+
+.hamburger-menu:hover .menu {
+display: block;
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+pointer-events: auto;
 }
 
