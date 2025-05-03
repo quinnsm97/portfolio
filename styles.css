@@ -21,6 +21,7 @@ header h1 {
     font-size: 3em;
     margin-bottom: 10px;
     border-bottom: 4px solid #0b52eb;
+    z-index: 1001;
 }
 
 header h2 {
@@ -99,50 +100,59 @@ html{
     scroll-behavior: smooth;
 }
 
-.corner-nav{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 300px;
+.hamburger-menu{
     position: fixed;
     top: 10px;
     left: 10px;
-    background-color: #0b52eb;
-    border-radius: 8px;
-    padding: 8px;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.menu-checkbox{
+    display: none;
 }
 
-.corner-nav ul{
+.menu-icon{
+    font-size: 24px;
+    background-color: #0b52eb;
+    color: #9e97ac;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+.menu-links{
     display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    margin-top: 8px;
+    background-color: #0b52eb;
+    border-radius: 6px;
+    padding: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 
-.corner-nav a {
-    font-size: 0.8em;
-    flex: 1 1 auto;
-    min-width: 0;
-    text-align: left;
+.menu-checkbox:checked + .menu-icon + .menu-links {
+    max-height: 500px;
+    opacity: 1;
+    padding: 10px;
+}
+
+.menu-links a {
     color: #9e97ac;
     text-decoration: none;
+    padding: 6px;
     font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 4px;
-    flex-grow: 1;
-    flex-shrink: 1;
-
-    
 
 }
 
-.corner-nav a:hover{
+.menu-links a:hover {
     background-color: #9e97ac;
     color: #0b52eb;
+    border-radius: 4px;
 }
 
