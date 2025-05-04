@@ -21,7 +21,7 @@ header h1 {
     font-size: 3em;
     margin-bottom: 10px;
     border-bottom: 4px solid #0b52eb;
-    z-index: 1001;
+    text-align: center;
 }
 
 header h2 {
@@ -31,7 +31,6 @@ header h2 {
 }
 
 nav {
-    background-color: #9e97ac;
     padding: 15px 0;
 }
 
@@ -78,7 +77,7 @@ section p {
     text-align: center;
 }
 
-#skills, #projects {
+#skills, #projects, #contact {
     text-align: center;
 }
 
@@ -89,6 +88,7 @@ main {
 
 .projects{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     gap: 400px;
@@ -103,7 +103,7 @@ html{
 .hamburger-menu{
     position: fixed;
     top: 10px;
-    left: 10px;
+    left: 0px;
     z-index: 1000;
 }
 .menu-checkbox{
@@ -111,6 +111,7 @@ html{
 }
 
 .menu-icon{
+    all: unset;
     font-size: 24px;
     background-color: #0b52eb;
     color: #9e97ac;
@@ -118,20 +119,24 @@ html{
     border-radius: 6px;
     cursor: pointer;
     display: inline-block;
+    border: solid white;
+    position: relative;
+    
 
 }
 
 .menu-links{
     display: flex;
     flex-direction: column;
+    justify-content: right;
+    gap: 8px;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.4s ease, opacity 0.4s ease;
-    margin-top: 8px;
     background-color: #0b52eb;
-    border-radius: 6px;
-    padding: 0 10px;
+    border-radius: 10px;
+    padding: 0px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
 }
@@ -143,16 +148,43 @@ html{
 }
 
 .menu-links a {
-    color: #9e97ac;
+    display: block;
+    color: #0b52eb;
+    background-color: #9e97ac;
     text-decoration: none;
     padding: 6px;
     font-weight: bold;
+    border-radius: 6px;
 
 }
 
 .menu-links a:hover {
-    background-color: #9e97ac;
+    background-color: white ;
     color: #0b52eb;
     border-radius: 4px;
 }
+
+footer {
+    color: #9e97ac;
+    text-align: center;
+}
+
+.glow-text {
+    color: #0b52eb;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px white;
+    }
+    to {
+        text-shadow: 0 0 20px yellow, 0 0 30px yellow;
+    }
+}
+
+  
+  
+
 
